@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fotbaliști</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th:first-child, td:first-child {
+      padding-right: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1>Jucatori:</h1>
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>Team</th>
+  </tr>
+  <tr th:each="fotbalist : ${fotbalistiList}">
+    <td th:text="${fotbalist.number}"></td>
+    <td th:text="${fotbalist.name}"></td>
+    <td th:text="${fotbalist.team}"></td>
+  </tr>
+</table>
+</body>
+</html>
